@@ -1,0 +1,80 @@
+﻿@model HumanitarianAid.Models.AdminDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>AdminDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.A_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_phoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_phoneNo)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

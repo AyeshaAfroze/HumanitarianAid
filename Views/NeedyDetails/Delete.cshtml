@@ -1,0 +1,120 @@
+﻿@model HumanitarianAid.Models.NeedyDetail
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>NeedyDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.N_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_annualincome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_annualincome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_phoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_phoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.N_occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.N_occupation)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

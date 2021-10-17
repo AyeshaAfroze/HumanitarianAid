@@ -1,0 +1,191 @@
+﻿@model HumanitarianAid.Models.NeedyDetail
+
+@{
+    Layout = null;
+}
+
+
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Seeker of Humanitarian Aid</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="~/NeedyDetails/Dashboard">
+                            HumanitarianAid
+                            <span class="visually-hidden">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/NeedyDetails/Appeal">Appeal</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/NeedyDetails/RequestNotification">Notification</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="~/Admin/Storageforneedy">Existing Donations</a>
+                    </li>
+
+
+
+                </ul>
+
+
+
+
+
+
+                <ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="~/Home/Index">LOGOUT</a>
+                    </li>
+                </ul>
+
+
+
+
+
+
+            </div>
+
+
+
+        </div>
+    </nav>
+</body>
+</html>
+<html>
+
+
+
+
+
+
+
+
+
+
+
+<body background="~/Content/Images/18.PNG">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <img src="~/Content/images/pro.png" class="img-fluid" alt="">
+                </div>
+                <div class="col align-bottom">
+                    <div class="form-horizontal p-3 mb-2 bg-dark text-black ">
+
+                        <div class="align-content-md-center text-center text-primary"><h1>My Profile</h1> </div>
+
+
+                        <hr />
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <div class="form-group">
+
+                            @Html.LabelFor(model => model.N_name, htmlAttributes: new { @class = "control-label col-md-2" })
+
+                            <div class="col-md-10" style="background-color:lightblue;">
+
+                                @Html.DisplayFor(model => model.N_name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_name, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_mail, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue; ">
+                                @Html.DisplayFor(model => model.N_mail, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_mail, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_dob, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_dob, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_dob, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_age, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_age, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_age, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_annualincome, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_annualincome, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_annualincome, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_gender, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_gender, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_gender, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_address, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_address, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_address, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_phoneNo, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_phoneNo, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_phoneNo, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_nationality, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_nationality, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_nationality, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            @Html.LabelFor(model => model.N_occupation, htmlAttributes: new { @class = "control-label col-md-2" })
+                            <div class="col-md-10" style="background-color: lightblue;">
+                                @Html.DisplayFor(model => model.N_occupation, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.N_occupation, "", new { @class = "text-danger" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    }
+
+</body>
+</html>

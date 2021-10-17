@@ -1,0 +1,69 @@
+﻿@model IEnumerable<HumanitarianAid.Models.AdminDetail>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.A_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_mail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_pass)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.A_phoneNo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_mail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_pass)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.A_phoneNo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.A_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.A_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.A_id })
+        </td>
+    </tr>
+}
+
+</table>

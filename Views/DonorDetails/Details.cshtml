@@ -1,0 +1,114 @@
+﻿@model HumanitarianAid.Models.DonorDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DonorDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.D_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_Password)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_Password)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_ConfirmPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_ConfirmPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_dob)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_dob)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_age)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_age)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_annualincome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_annualincome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_phoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_phoneNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_nationality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_nationality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.D_occupation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.D_occupation)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.D_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

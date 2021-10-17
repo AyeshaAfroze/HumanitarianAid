@@ -1,0 +1,74 @@
+﻿@model HumanitarianAid.Models.AdminDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>AdminDetail</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.A_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_mail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_mail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_pass)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_pass)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_gender)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_gender)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.A_phoneNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.A_phoneNo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.A_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<HumanitarianAid.Models.Record>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.R_ProductName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Quantity)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.unit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Donationtable.Producttype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonorDetail.D_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NeedyDetail.N_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.R_ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Quantity)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Donationtable.Producttype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonorDetail.D_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NeedyDetail.N_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.SL }) |
+            @Html.ActionLink("Details", "Details", new { id=item.SL }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.SL })
+        </td>
+    </tr>
+}
+
+</table>
