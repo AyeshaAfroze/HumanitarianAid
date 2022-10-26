@@ -1,1 +1,1 @@
-Humanitarian Aid is a web-application developed using C# and mvc framework. This web application will ease donation and appeals for help of the charity organization along with maintaing other functionalities of the organization.
+Humanitarian Aid is a web-application developed using C# and asp.net mvc framework. A web application where people can come help the less privileged and the less privileged can seek what they need under the control of an organisation along with maintaing other functionalities of the organization..
